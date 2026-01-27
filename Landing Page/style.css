@@ -20,6 +20,9 @@ body{
     background-color: #232323;
     color: #fff;
     letter-spacing: 0.5px;
+    position: sticky;
+    top: 0px;
+    
 }
 
 .navbar p{
@@ -51,25 +54,33 @@ ul{
 .main{
     font-size: 36px;
     padding: 1rem;
-    color: gold;
+    color: #fff;
+    font-weight: 600;
 }
 
+
 .hero .sub{
-    color: gold;
+    color: #fff;
     font-size: 20px;
-    position: relative;
-    top: -12px;
 }
 
 button{
     height: 36px;
     font-size: 1rem;
     border-radius: 20px;
-    border: 1px solid rgb(168, 143, 0);
-    background-color: gold;
+    border: 1px solid ;
+    background-color: #232323;
     padding: 0.25rem 01rem;
     font-weight: 600;
     letter-spacing: 0.5px;
+    margin: 0.5rem;
+    margin-top: 0.75rem;
+    color: #fff;
+}
+
+button:hover{
+    box-shadow: 3px 3px 6px #121212;
+    transition-duration: 0.5s;
 }
 
 .cards{
@@ -104,6 +115,11 @@ button{
     margin-top: 0.5rem;
     font-size: 20px;
     margin-top: 2rem;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    transition-duration: 0.5s;
 }
 
 .footer{
