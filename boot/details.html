@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-dark">
+  <div class="container">
+    <a class="navbar-brand text-light" href="index.html">MyGallery</a>
+  </div>
+</nav>
+
+<!-- DETAILS SECTION -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4 ">Image Details</h2>
+
+    <img id="imageDisplay" class="img-fluid rounded shadow mb-4 " style="max-width:600px;">
+
+    <p id="imageInfo" class="lead"></p>
+
+    <a href="index.html" class="btn btn-dark mt-3">Back to Gallery</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-light text-center py-3 mt-5">
+  <p class="mb-0">© 2026 MyGallery | All Rights Reserved</p>
+</footer>
+
+<script>
+  const images = {
+    1: {
+      src: "https://picsum.photos/id/1015/800/500",
+      info: "Beautiful mountain landscape with river."
+    },
+    2: {
+      src: "https://picsum.photos/id/1025/800/500",
+      info: "Majestic eagle close-up view."
+    },
+    3: {
+      src: "https://picsum.photos/id/1035/800/500",
+      info: "Peaceful forest pathway."
+    },
+    4: {
+      src: "https://picsum.photos/id/1045/800/500",
+      info: "Snow covered mountains under blue sky."
+    },
+    5: {
+      src: "https://picsum.photos/id/1055/800/500",
+      info: "Ocean waves during sunset."
+    },
+    6: {
+      src: "https://picsum.photos/id/1065/800/500",
+      info: "Calm lake surrounded by trees."
+    }
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const imgId = params.get("img");
+
+  if(images[imgId]) {
+    document.getElementById("imageDisplay").src = images[imgId].src;
+    document.getElementById("imageInfo").textContent = images[imgId].info;
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
